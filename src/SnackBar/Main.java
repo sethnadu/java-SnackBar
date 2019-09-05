@@ -43,6 +43,11 @@ public class Main
         System.out.println(bob.getName() + "'s Cash On Hand: " + bob.getCashOnHand());
         System.out.println(s3.getName() + "'s Remaining: " + s3.getQuantity());
 
+        System.out.println("Snack: " + s1.getName() + ", VendingMachine" + food.getName() + ", Remaining: " + s1.getQuantity() + ", Total Cost of Remaing: " + s1.getCost(s1.getQuantity()));
+        System.out.println("Snack: " + s2.getName() + ", VendingMachine" + food.getName() + ", Remaining: " + s2.getQuantity() + ", Total Cost of Remaing: " + s2.getCost(s2.getQuantity()));
+        System.out.println("Snack: " + s3.getName() + ", VendingMachine" + food.getName() + ", Remaining: " + s3.getQuantity() + ", Total Cost of Remaing: " + s3.getCost(s3.getQuantity()));
+        System.out.println("Snack: " + s4.getName() + ", VendingMachine" + drink.getName() + ", Remaining: " + s4.getQuantity() + ", Total Cost of Remaing: " + s4.getCost(s4.getQuantity()));
+        System.out.println("Snack: " + s5.getName() + ", VendingMachine" + drink.getName() + ", Remaining: " + s5.getQuantity() + ", Total Cost of Remaing: " + s5.getCost(s5.getQuantity()));
 
 
     }
