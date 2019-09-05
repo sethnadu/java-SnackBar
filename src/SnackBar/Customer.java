@@ -1,24 +1,25 @@
-package SnackBar;
+package snackbar;
 
 public class Customer
 {
     private static int maxId = 0;
     private int id;
     private String name;
-    private double cash;
+    private double cashOnHand;
 
-    public Customer(String name, double cash)
+
+
+    public Customer(String name, double cashOnHand)
     {
         maxId++;
         id = maxId;
-
         this.name = name;
-        this.cash = cash;
+        this.cashOnHand = cashOnHand;
     }
 
-    public int getId()
+    public void addCash(double cash)
     {
-        return id;
+        this.cashOnHand += cash;
     }
 
     public String getName()
@@ -31,18 +32,15 @@ public class Customer
         this.name = name;
     }
 
+    public void buySnack(int quantity, Snack snack)
+    {
+        snack.buySnack(quantity);
+        this.cashOnHand -= snack.getCost(quantity);
+    }
+
     public double getCashOnHand()
     {
-        return cash;
+        return cashOnHand;
     }
 
-    public void addCash(double cash)
-    {
-        this.cash += cash;
-    }
-
-    public void buySnack(double cash)
-    {
-        this.cash -= cash;
-    }
 }
